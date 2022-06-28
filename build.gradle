@@ -56,7 +56,6 @@ shadowJar {
     archiveBaseName.set(project.name)
     archiveClassifier.set('')
     archiveVersion.set(version)
-    destinationDir(file('C:\\Users\\katar\\Desktop\\Development Server\\plugins'))
 }
 
 publishing {
