@@ -17,6 +17,9 @@ repositories {
         name = 'sonatype'
         url = 'https://oss.sonatype.org/content/groups/public/'
     }
+    maven {
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
 }
 
 dependencies {
@@ -25,6 +28,7 @@ dependencies {
     implementation 'ch.qos.logback:logback-classic:1.2.11'
     implementation 'org.reflections:reflections:0.10.2'
     implementation 'dev.morphia.morphia:morphia-core:2.2.7'
+    implementation 'com.mojang:authlib:1.5.25'
 }
 
 def targetJavaVersion = 17

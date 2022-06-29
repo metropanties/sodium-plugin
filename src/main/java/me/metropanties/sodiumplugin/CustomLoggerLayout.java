@@ -38,11 +38,11 @@ public class CustomLoggerLayout extends LayoutBase<ILoggingEvent> {
                 builder.append(element).append("\n");
             }
 
-            return PREFIX + thread + level + event.getMessage() + "\n" + AnsiColors.RED +
+            return PREFIX + thread + level + event.getFormattedMessage() + "\n" + AnsiColors.RED +
                     builder.substring(0, builder.length() - 1) + AnsiColors.RESET;
         }
 
-        return PREFIX + thread + level + event.getMessage();
+        return PREFIX + thread + level + event.getFormattedMessage();
     }
 
     @SuppressWarnings("unused")
