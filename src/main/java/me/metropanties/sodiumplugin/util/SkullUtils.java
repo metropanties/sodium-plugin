@@ -18,7 +18,7 @@ public class SkullUtils {
 
     @NotNull
     public static ItemStack getSkull(@NotNull String texture) {
-        final ItemStack skull = new ItemStack(Material.SKULL_ITEM);
+        final ItemStack skull = new ItemStack(Material.SKULL);
         SkullMeta meta = (SkullMeta) skull.getItemMeta();
         assert meta != null;
         GameProfile profile = new GameProfile(UUID.randomUUID(), null);
