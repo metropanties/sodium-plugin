@@ -1,8 +1,8 @@
 package me.metropanties.sodiumplugin.util;
 
+import com.cryptomorin.xseries.XMaterial;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
-import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.jetbrains.annotations.NotNull;
@@ -18,7 +18,8 @@ public class SkullUtils {
 
     @NotNull
     public static ItemStack getSkull(@NotNull String texture) {
-        final ItemStack skull = new ItemStack(Material.SKULL);
+        assert XMaterial.PLAYER_HEAD.parseMaterial() != null;
+        final ItemStack skull = new ItemStack(XMaterial.PLAYER_HEAD.parseMaterial());
         SkullMeta meta = (SkullMeta) skull.getItemMeta();
         assert meta != null;
         GameProfile profile = new GameProfile(UUID.randomUUID(), null);
